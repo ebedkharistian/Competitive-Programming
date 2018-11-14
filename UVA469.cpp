@@ -47,8 +47,10 @@ int main(){
 	cin.ignore();
 	getline(cin, input);
 
-
+    bool first = true;
 	while(T--){
+        if(first){ first = false; }else{cout << endl;} // blank lines between output
+        
         vii L;
         vector<string> data;
 		while(true){	
@@ -71,6 +73,7 @@ int main(){
 		vii::iterator it;
 		for(it = L.begin(); it != L.end(); it++){
 			cout << bfs( (*it), data ) << endl;
-		}		
+		}	
+        
 	}
 }
